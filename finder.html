@@ -10,11 +10,6 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
-  background-image: url("https://afar.brightspotcdn.com/dims4/default/b74db7a/2147483647/strip/true/crop/3000x1564+0+179/resize/840x438!/format/webp/quality/90/?url=https%3A%2F%2Fafar-media-production-web.s3.amazonaws.com%2Fbrightspot%2F4a%2F55%2F3870b1c8ef6fe2c05609d9c7decc%2Foriginal-shutterstock-1632041413-20copy.jpg");
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }
 
 html {
@@ -47,6 +42,37 @@ html {
             </div>
         </nav>
         <br />
+        <table>
+            <tr><th>Restaurant Finder Form</th></tr>
+            <tr><td>
+                <br>
+                <form id="myForm">
+                    <p>Click that tags that best suit you</p>
+                    </br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"> <!-- It's the check type -->
+                        <label class="form-check-label" for="inlineCheckbox1">Fast Food</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">Italian</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">Steakhouse</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option4">
+                        <label class="form-check-label" for="inlineCheckbox3">Cafe</label>
+                      </div>
+                    </br>
+                    </br>
+                    <div class="button">
+                        <button type="submit" class="btn btn-primary mb-3" onsumbit="printInfo()">Submit</button>
+                    </div>       
+                </form>
+            </td></tr>
+        </table>
     </div>
 
 </body>
