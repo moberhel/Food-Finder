@@ -1,0 +1,92 @@
+<html>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <title>Kelowna Restaurant Finder</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+.about {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+</style>
+</head>
+
+<body>
+    <div class="text-center">
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="">Finder</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <br />
+        <table>
+            <tr><th>Restaurant Finder Form</th></tr>
+            <tr><td>
+                <br>
+                <form id="myForm">
+                    <p>Click that tags that best suit you</p>
+                    </br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"> <!-- It's the check type -->
+                        <label class="form-check-label" for="inlineCheckbox1">Fast Food</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">Italian</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">Steakhouse</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option4">
+                        <label class="form-check-label" for="inlineCheckbox3">Cafe</label>
+                      </div>
+                    </br>
+                    </br>
+                    <div class="button">
+                        <button type="submit" class="btn btn-primary mb-3" onsumbit="printInfo()">Submit</button>
+                    </div>       
+                </form>
+            </td></tr>
+        </table>
+        <script>
+            function printInfo(){
+                var elements = $("#myForm").serializeArray();
+                var content = "<br>";
+                $("#modal-title").text("Your form has been submitted!");
+                for(var i = 0; i < elements.length; i++){
+                    content += (1+i) + ". " + elements[i].value + "<br>";
+                }
+                document.getElementById("content").innerHTML = "You entered the following information into the form: " + content; 
+            }
+        </script>
+    </div>
+
+</body>
+
+
+</html>
