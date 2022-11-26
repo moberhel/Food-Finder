@@ -75,14 +75,8 @@ html {
         </table>
         <script>
             function printInfo(){
-                window.open("search.html", "Restaurant Search", "resizable=yes");
-                var elements = $("#myForm").serializeArray();
-                var content = "<br>";
-                $("#modal-title").text("Your form has been submitted!");
-                for(var i = 0; i < elements.length; i++){
-                    content += (1+i) + ". " + elements[i].value + "<br>";
-                }
-                document.getElementById("content").innerHTML = "You entered the following information into the form: " + content; 
+                var opened = window.open("");
+                opened.document.write("<html><head><title>Restaurant Search</title></head><body>test</body></html>");
             }
         </script>
     </div>
