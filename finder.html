@@ -46,23 +46,23 @@ html {
             <tr><th>Restaurant Finder Form</th></tr>
             <tr><td>
                 <br>
-                <form id="myForm" onsumbit="printInfo(event)">
+                <form id="myForm">
                     <p>Click that tags that best suit you</p>
                     </br>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"> <!-- It's the check type -->
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="fastfood"> <!-- It's the check type -->
                         <label class="form-check-label" for="inlineCheckbox1">Fast Food</label>
                       </div>
                       <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="italian">
                         <label class="form-check-label" for="inlineCheckbox2">Italian</label>
                       </div>
                       <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="steakhouse">
                         <label class="form-check-label" for="inlineCheckbox3">Steakhouse</label>
                       </div>
                       <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option4">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="cafe">
                         <label class="form-check-label" for="inlineCheckbox3">Cafe</label>
                       </div>
                     </br>
@@ -74,12 +74,16 @@ html {
             </td></tr>
         </table>
         <script>
-            function printInfo(e){
+            var form = document.getElementById('form')
+            
+            form.addEventListener('submit', function(e) {
                 e.preventDefault
                 alert("form is submitted")
-                // var opened = window.open("search.html");
-                // opened.document.write("<html><head><title>Restaurant Search</title></head><body>test</body></html>");
-            }
+                var fastfood = document.getElementById('fastfood').value
+            })
+
+            // var opened = window.open("search.html");
+            // opened.document.write("<html><head><title>Restaurant Search</title></head><body>test</body></html>");
         </script>
     </div>
 
