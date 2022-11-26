@@ -46,7 +46,7 @@ html {
             <tr><th>Restaurant Finder Form</th></tr>
             <tr><td>
                 <br>
-                <form id="myForm">
+                <form id="myForm" method="post" action="search.html">
                     <p>Click that tags that best suit you</p>
                     </br>
                     <div class="form-check form-check-inline">
@@ -75,6 +75,7 @@ html {
         </table>
         <script>
             function printInfo(){
+                window.open("search.html", "Restaurant Search", "resizable=yes");
                 var elements = $("#myForm").serializeArray();
                 var content = "<br>";
                 $("#modal-title").text("Your form has been submitted!");
