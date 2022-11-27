@@ -57,14 +57,12 @@ html {
         </table>
         <p id="data"></p>
         <script type="text/javascript">
-            var form = document.getElementById('myForm');
-
-            form.addEventListener('submit', function(e) {
-                e.preventDefault;
+            function myFunction(e) {
+                e.preventDefault();
                 alert("form is submitted");
                 const food = document.getElementById("food");
                 document.getElementById("data").innerHTML = food.value;
-            });
+            }
         </script>
     </div>
 
