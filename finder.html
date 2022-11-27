@@ -60,10 +60,10 @@ html {
             var form = document.getElementById('myForm');
 
             form.addEventListener('submit', function(e) {
-                e.preventDefault
-                alert("form is submitted")
-                var food = document.getElementById("food").value
-                food.innerHTML = "data"
+                e.preventDefault;
+                alert("form is submitted");
+                const food = document.getElementById("food");
+                document.getElementById("data").innerHTML = food;
             });
         </script>
     </div>
