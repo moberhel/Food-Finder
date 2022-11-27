@@ -73,14 +73,14 @@ html {
             </td></tr>
         </table>
         <p id="data"></p>
-        <script>
+        <script type="text/javascript">
             var form = document.getElementById('myForm')
 
             form.addEventListener('submit', function(e) {
                 e.preventDefault
                 alert("form is submitted")
                 var fastfood = document.getElementById("fastfood").value
-                fastfood.innerHTML = fastfood
+                fastfood.innerHTML = fastfood;
             })
         </script>
     </div>
