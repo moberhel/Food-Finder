@@ -74,16 +74,25 @@ th {
                 </form>
             </td></tr>
         </table>
-        <p id="data"></p>
         </div>
-        <script type="text/javascript">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js">
             function myFunction(e) {
                 e.preventDefault();
-                alert("form is submitted");
-                const food = document.getElementById("food");
-                document.getElementById("data").innerHTML = food.value;
+                const food = document.getElementById("food").value;
+                const s = JSON.stringify(food);
+                console.log(s);
+                window.alert(s)
+                $.ajax({
+                    url:"/test",
+                    type:"POST",
+                    contentType: "application/json",
+                    data: JSON.stringify(s)
+                });
             }
+            var selecvalue = document.getElementById("data"), data = {{ item }};
+            selectvalue.innerHTML = data;
         </script>
+        <p id="data"></p>
     </div>
 
 </body>
