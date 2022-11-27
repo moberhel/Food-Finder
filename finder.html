@@ -72,6 +72,7 @@ html {
                 </form>
             </td></tr>
         </table>
+        <p id="data"></p>
         <script>
             var form = document.getElementById('myForm')
 
@@ -79,7 +80,7 @@ html {
                 e.preventDefault
                 alert("form is submitted")
                 var fastfood = document.getElementById("fastfood").value
-                write(fastfood)
+                fastfood.innerHTML = fastfood
             })
         </script>
     </div>
