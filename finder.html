@@ -9,17 +9,35 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
+  background: 
+  linear-gradient(to right,transparent 20%, white 20%, white 80%,transparent 0)
+  ,url('https://thumbs.dreamstime.com/b/greek-food-background-traditional-different-greek-dishes-set-greek-food-background-traditional-different-greek-dishes-set-top-view-178761927.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 html {
   box-sizing: border-box;
 }
 
-.about {
-  padding: 50px;
-  text-align: center;
-  background-color: #474e5d;
-  color: white;
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    }
+th {
+    padding: 50px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+.button {
+    justify-content: center;
+    display:flex;
 }
 </style>
 </head>
@@ -41,13 +59,14 @@ html {
             </div>
         </nav>
         <br>
+        <div class="form">
         <table>
             <tr><th>Food Search</th></tr>
             <tr><td>
                 <form name="myForm" id="myForm" method="get">
                     <br>
                     <div class="mb-3">
-                        <input type ="text" class="form-control" id="food"></textarea> <!-- It's the text type -->
+                        <input type ="text" class="form-control" id="food"></textarea> 
                     </div>   
                     <div class="button">
                         <input type="submit" class="btn btn-primary mb-3" value="Submit" onclick="myFunction(event)">
@@ -56,6 +75,7 @@ html {
             </td></tr>
         </table>
         <p id="data"></p>
+        </div>
         <script type="text/javascript">
             function myFunction(e) {
                 e.preventDefault();
