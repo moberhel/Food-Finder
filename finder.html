@@ -40,48 +40,29 @@ html {
                 </div>
             </div>
         </nav>
-        <br />
+        <br>
         <table>
-            <tr><th>Restaurant Finder Form</th></tr>
-            <tr><td><p>Click that tags that best suit you</p></td></tr>
+            <tr><th>Food Search</th></tr>
             <tr><td>
-                <br>
                 <form name="myForm" id="myForm" method="get">
-                    </br>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="fastfood"> 
-                        <label class="form-check-label" for="inlineCheckbox1">Fast Food</label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="italian">
-                        <label class="form-check-label" for="inlineCheckbox2">Italian</label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="steakhouse">
-                        <label class="form-check-label" for="inlineCheckbox3">Steakhouse</label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="cafe">
-                        <label class="form-check-label" for="inlineCheckbox3">Cafe</label>
-                      </div>
-                    </br>
-                    </br>
+                    <br>
+                    <div class="mb-3">
+                        <input type ="text" class="form-control" id="food"></textarea> <!-- It's the text type -->
+                    </div>   
                     <div class="button">
-                        <input type="submit" class="btn btn-primary mb-3" value="Submit">
+                        <input type="submit" class="btn btn-primary mb-3" value="Submit" onsumbit="myFunction(event)">
                     </div>       
                 </form>
             </td></tr>
         </table>
         <p id="data"></p>
         <script type="text/javascript">
-            var form = document.getElementById('myForm')
-
-            form.addEventListener('submit', function(e) {
-                e.preventDefault
-                alert("form is submitted")
-                var fastfood = document.getElementById("fastfood").value
-                fastfood.innerHTML = fastfood;
-            })
+            function myFunction(e) {
+                e.preventDefault();
+                alert("form is submitted");
+                const food = document.getElementById("food");
+                document.getElementById("data").innerHTML = food.value;
+            }
         </script>
     </div>
 
