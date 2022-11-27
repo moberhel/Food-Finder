@@ -74,14 +74,14 @@ html {
         </table>
         <script type="text/javascript">
             var form = document.getElementById('myForm')
-            
+            var opened = window.open("search.html");
+            opened.document.write("<html><head><title>Restaurant Search</title></head><body>test</body></html>");
+
             form.addEventListener('submit', function(e) {
                 e.preventDefault
                 alert("form is submitted")
-                var fastfood = document.getElementById('fastfood').value
+                var fastfood = document.getElementById("fastfood").value
                 console.log(fastfood)
-                var opened = window.open("search.html");
-                opened.document.write("<html><head><title>Restaurant Search</title></head><body>test</body></html>");
             })
         </script>
     </div>
